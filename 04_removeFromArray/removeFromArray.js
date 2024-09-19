@@ -1,14 +1,9 @@
-const removeFromArray = function(array,num) {
-     let arrayNun = new;
+const removeFromArray = function(array, ...args) {
 
+let newArray = new Array(array.length);
 
-    for(let i = 0; i <= array.length - 1; i++){
-        if(array[i] == num){
-            array[i] = array[i+1]
-            num = array[i+1]
-        }
-
-    }
+    array = array.filter((i) => !args.includes(i))
+    
     return array;
 }
 // Do not edit below this line
